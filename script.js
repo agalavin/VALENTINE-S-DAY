@@ -193,6 +193,6 @@ function backToMain(){
 // SECRET MESSAGE KEY
 document.addEventListener("keydown",function(e){
     if(e.key==="l" || e.key==="L"){
-        alert("Secret message: Ikaw lang ang mahal ko habang buhay ❤️");
+        alert("Secret message: HINAY LA HONEYY HAHAHHA ❤️");
     }
 });
