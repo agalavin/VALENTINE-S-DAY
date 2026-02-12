@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For My Love ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- PASSWORD SCREEN -->
+<div id="lockScreen">
+    <h2>Enter Password 💌</h2>
+    <input type="password" id="pass" placeholder="our secret">
+    <button onclick="checkPass()">Enter</button>
+</div>
+
+<!-- CINEMATIC INTRO -->
+<div id="intro">
+    <h1>For My Love ❤️</h1>
+    <p>Every photo here is our memory...</p>
+    <button onclick="enterSite()">Enter Love</button>
+</div>
+
+<!-- MAIN SITE -->
+<div id="main">
+
+<h1 class="title">HAPPY VALENTINE'S HON💖</h1>
+
+<div class="menu">
+    <span onclick="showCategory('us')">💑 Us</span>
+    <span onclick="showCategory('her')">👩 Her</span>
+    <span onclick="showCategory('mine')">👨 Me</span>
+    <span onclick="showLoveLetter()">💌 Love Letter</span>
+</div>
+
+<!-- Transition Selection 
+<div class="transitionMenu">
+    <label>Select Transition:</label>
+    <select id="transitionSelect" onchange="changeTransition(this.value)">
+        <option value="fade">Fade</option>
+        <option value="slide">Slide</option>
+        <option value="zoom">Zoom</option>
+        <option value="flip">Flip</option>
+        <option value="blur">Blur</option>
+    </select>
+</div>-->
+
+<div class="slideshow">
+    <img id="slide" src="">
+</div>
+
+<div class="gallery" id="gallery"></div>
+
+<!-- MESSAGE MENU BUTTON -->
+<div class="messageMenu">
+    <button onclick="openMessage()">💌 Message</button>
+</div>
+
+</div>
+
+<!-- MESSAGE POPUP -->
+<div id="messageBox">
+    <div class="msgContent">
+        <h2>Para sa'yo ❤️</h2>
+        <p id="loveText"></p>
+        <button onclick="closeMessage()">Close</button>
+    </div>
+</div>
+
+<!-- LOVE LETTER PAGE -->
+<div id="loveLetter" style="display:none;">
+    <h1 class="title">My Love Letter 💖</h1>
+    <div class="letterBox">
+        <p id="letterText">
+            hi honeyy💖, <br><br>
+               Una sa lahat nag papasalamat ako kay god dahil pinakilala ka sakin you make my life so much happier and inspire me every single day😘. <br>
+             I miss you so much, kaya natin to hon darating din yung time na magiging worth it lahat ng iyak, pagud, at walang kataposang pagintindi, mag pray lang lagi wishing you good health always . <br>
+            I LOVE YOU ALWAYSS HONEYYY HAPPY VALENTINE'S DAY 😘😘. 💖 <br><br>
+            - VIN MO
+        </p>
+        <button onclick="backToMain()">← Back</button>
+    </div>
+</div>
+
+<!-- MUSIC -->
+<audio id="music" loop>
+<source src="music.mp3" type="audio/mp3">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>

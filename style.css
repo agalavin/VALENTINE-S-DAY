@@ -1,0 +1,278 @@
+body{
+    margin:0;
+    font-family:Arial;
+    text-align:center;
+    background:black;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* lock screen */
+#lockScreen{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:black;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:10px;
+}
+
+#lockScreen input{
+    padding:10px;
+    font-size:18px;
+    border-radius:10px;
+    border:none;
+    margin:10px;
+    width:250px;
+    max-width:90%;
+}
+
+#lockScreen button{
+    padding:10px 20px;
+    border:none;
+    border-radius:10px;
+    background:pink;
+    cursor:pointer;
+}
+
+/* intro */
+#intro{
+    display:none;
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:black;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    animation:fade 2s;
+    padding:10px;
+}
+
+#intro h1{
+    font-size:50px;
+    text-shadow:0 0 20px pink;
+}
+
+#intro button{
+    padding:12px 25px;
+    border:none;
+    border-radius:20px;
+    background:pink;
+    cursor:pointer;
+}
+
+@keyframes fade{
+    from{opacity:0}
+    to{opacity:1}
+}
+
+/* main */
+#main{display:none;}
+
+.title{
+    margin-top:20px;
+    font-size:40px;
+    text-shadow:0 0 20px pink;
+}
+
+/* menu */
+.menu span{
+    margin:10px;
+    padding:12px 20px;
+    background:rgba(255,255,255,0.1);
+    border-radius:20px;
+    cursor:pointer;
+    transition:.5s;
+    display:inline-block;
+}
+
+.menu span:hover{
+    background:pink;
+    color:black;
+    transform:scale(1.2);
+}
+
+/* transition menu */
+.transitionMenu{
+    margin:10px 0;
+}
+
+.transitionMenu select{
+    padding:8px 12px;
+    border-radius:10px;
+    border:none;
+    font-size:16px;
+}
+
+/* slideshow */
+.slideshow{
+    width:330px;
+    height:330px;
+    margin:20px auto;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 0 25px pink;
+    position:relative;
+}
+
+.slideshow img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition: all 0.7s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.gallery{
+    position:relative;
+    width:100%;
+    height:80vh;
+    overflow:hidden;
+}
+
+.gallery img{
+    position:absolute;
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border-radius:15px;
+    box-shadow:0 0 15px pink;
+    transition:0.3s;
+    animation: scatterMove 6s linear infinite;
+}
+
+/* walang space, random galaw */
+@keyframes scatterMove{
+    0%{transform:translate(0,0) rotate(0deg);}
+    25%{transform:translate(40px,-60px) rotate(10deg);}
+    50%{transform:translate(-60px,40px) rotate(-10deg);}
+    75%{transform:translate(60px,60px) rotate(15deg);}
+    100%{transform:translate(-40px,-40px) rotate(-15deg);}
+}
+
+.gallery img:hover{
+    transform:scale(1.4) rotate(10deg);
+    z-index:999;
+}
+
+/* message button */
+.messageMenu{
+    margin-top:20px;
+}
+
+.messageMenu button{
+    padding:12px 25px;
+    border:none;
+    border-radius:20px;
+    background:pink;
+    cursor:pointer;
+    font-size:16px;
+    transition:.5s;
+}
+
+.messageMenu button:hover{
+    transform:scale(1.1);
+    background:white;
+    color:black;
+}
+
+/* message popup */
+#messageBox{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.8);
+    justify-content:center;
+    align-items:center;
+    display:flex;
+    padding:10px;
+}
+
+.msgContent{
+    background:black;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 0 25px pink;
+    width:300px;
+    max-width:95%;
+    animation:fade 1s;
+}
+
+.msgContent h2{
+    color:pink;
+}
+
+.msgContent button{
+    margin-top:15px;
+    padding:10px 20px;
+    border:none;
+    border-radius:15px;
+    background:pink;
+    cursor:pointer;
+}
+
+/* LOVE LETTER */
+.letterBox{
+    width:80%;
+    max-width:500px;
+    margin:30px auto;
+    background:rgba(255,192,203,0.1);
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 0 25px pink;
+    text-align:left;
+    line-height:1.6;
+}
+
+.letterBox p{
+    font-size:18px;
+}
+
+.letterBox button{
+    margin-top:20px;
+    padding:10px 20px;
+    border:none;
+    border-radius:15px;
+    background:pink;
+    cursor:pointer;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 600px){
+    #intro h1{
+        font-size:32px;
+    }
+    .title{
+        font-size:28px;
+    }
+    .slideshow{
+        width:90%;
+        height:auto;
+    }
+    .slideshow img{
+        height:auto;
+    }
+    .gallery img{
+        width:90px;
+        height:90px;
+    }
+    .menu span{
+        padding:10px 15px;
+        margin:8px;
+        font-size:14px;
+    }
+    .messageMenu button{
+        font-size:14px;
+        padding:10px 15px;
+    }
+    .letterBox p{
+        font-size:16px;
+    }
+}
